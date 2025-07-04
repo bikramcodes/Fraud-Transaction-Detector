@@ -1,0 +1,14 @@
+# Ignore Python and venv
+__pycache__/
+*.pyc
+venv/
+
+# Ignore data
+data/raw/
+data/processed/
+
+# Ignore notebooks checkpoint files
+.ipynb_checkpoints/
+
+# VS Code settings (optional)
+.vscode/
