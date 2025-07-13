@@ -1,3 +1,8 @@
+import pandas as pd
+
+def save_data(df, path, name):
+    df.to_csv(path+name)
+
 from pathlib import Path
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -13,4 +18,3 @@ def save_fig(df, fig_id, tight_layout=True, fig_extension="png", resolution=300)
     sns.boxplot(df[fig_id])
     plt.savefig(path, format=fig_extension, dpi=resolution)
     plt.show()
-
