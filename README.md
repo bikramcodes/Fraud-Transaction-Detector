@@ -19,23 +19,38 @@ Your role as a **PredCatch Data Scientist** is to:
 fraud-transaction-detector/
 ├── data/
 │   ├── processed/
-│   │   ├── xtrain.csv
-│   │   ├── xtest.csv
-│   │   └── ytrain.csv
+|   |   |── y.csv
+|   |   |── X.csv
+│   │   ├── X_train.csv
+│   │   ├── test_data.csv
+│   │   └── y_train.csv
 │   └── raw/
+|   |   |── geo.csv
+|   |   |── instance.csv
+│   │   ├── lambdawts.csv
+│   │   ├── train_data.csv
+│   │   ├── test_data.csv
+│   │   └── qset.csv   
 ├── images/
 │   └── *.png (visuals and box plots)
 ├── models/
-│   └── final_model.pkl
+│   └── logistics_regression.pkl
 ├── notebooks/
-│   └── data-exploration.ipynb
+│   └── data_exploration.ipynb
 ├── scripts/
-│   ├── preprocessing.py
-│   ├── modeling.py
-│   └── utils.py
+│   ├── data_loader.py
+│   ├── get_boxplots.py
+│   ├── informer.py
+│   ├── preprocess.py
+│   ├── save_images.py
+│   ├── train_lgr.py
+│   ├── treat_outlier.py
+│   ├── get_boxplots.py
+│   └── utilis.py
 ├── venv/
 ├── .gitignore
 ├── main.py
+├── Presentation.pptx
 ├── requirements.txt
 └── README.md
 ```
@@ -47,8 +62,8 @@ The project uses **six main datasets** (renamed for clarity):
 - `instance.csv`
 - `lambdawts.csv`
 - `qset.csv`
-- `train.csv`
-- `test.csv`
+- `train_data`
+- `test_data`
 
 These contain customer and transaction-level features including:
 - Geographic location
